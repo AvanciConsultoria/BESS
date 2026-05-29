@@ -1,0 +1,204 @@
+/* BESS Seminar — Academic executive visual system */
+:root {
+  --bess-navy: #07192f;
+  --bess-blue: #005ca9;
+  --bess-cyan: #19b6d2;
+  --bess-green: #0c7a43;
+  --bess-orange: #ff7a21;
+  --bess-yellow: #f5b700;
+  --bess-red: #cf2e2e;
+  --bess-gray: #eef3f8;
+  --bess-muted: #6d7b8a;
+}
+
+.slidev-layout {
+  background: radial-gradient(circle at 5% 5%, rgba(25, 182, 210, 0.10), transparent 32%),
+    linear-gradient(135deg, #ffffff 0%, #f7fafc 48%, #eef5fb 100%);
+  color: var(--bess-navy);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3 {
+  color: var(--bess-navy);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+h1 { font-size: 2.35rem; line-height: 1.04; }
+h2 { font-size: 1.55rem; }
+p, li { font-size: 1rem; line-height: 1.45; }
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  color: var(--bess-blue);
+  font-weight: 800;
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  line-height: .96;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+
+.hero-subtitle {
+  font-size: 1.18rem;
+  color: #34495e;
+  line-height: 1.35;
+}
+
+.card {
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(7,25,47,.10);
+  border-radius: 22px;
+  padding: 1.05rem;
+  box-shadow: 0 16px 40px rgba(7,25,47,.08);
+}
+
+.dark-card {
+  background: linear-gradient(135deg, var(--bess-navy), #0e315a);
+  color: white;
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: 0 24px 56px rgba(7,25,47,.22);
+}
+
+.dark-card h2, .dark-card h3 { color: white; }
+
+.metric {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: var(--bess-blue);
+  line-height: 1;
+}
+
+.metric-small {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--bess-blue);
+}
+
+.caption {
+  color: var(--bess-muted);
+  font-size: .72rem;
+  line-height: 1.25;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: .22rem .62rem;
+  font-size: .68rem;
+  font-weight: 800;
+  background: rgba(0,92,169,.10);
+  color: var(--bess-blue);
+}
+
+.tag-green { background: rgba(12,122,67,.11); color: var(--bess-green); }
+.tag-orange { background: rgba(255,122,33,.13); color: var(--bess-orange); }
+.tag-red { background: rgba(207,46,46,.10); color: var(--bess-red); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
+
+.figure-box {
+  background: white;
+  border: 1px solid rgba(7,25,47,.10);
+  border-radius: 18px;
+  padding: .55rem;
+  box-shadow: 0 14px 36px rgba(7,25,47,.07);
+}
+
+.figure-xl {
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.bess-footer {
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .65rem;
+  color: rgba(7,25,47,.52);
+}
+
+.eq {
+  background: #ffffff;
+  border-left: 5px solid var(--bess-cyan);
+  border-radius: 12px;
+  padding: .8rem 1rem;
+  box-shadow: 0 12px 30px rgba(7,25,47,.06);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .5rem;
+  align-items: stretch;
+}
+
+.timeline .step {
+  background: white;
+  border-radius: 16px;
+  padding: .7rem;
+  border: 1px solid rgba(7,25,47,.10);
+  position: relative;
+}
+
+.timeline .step::after {
+  content: '→';
+  position: absolute;
+  right: -.5rem;
+  top: 42%;
+  color: var(--bess-blue);
+  font-weight: 900;
+}
+.timeline .step:last-child::after { content: ''; }
+
+.table-clean {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .82rem;
+}
+.table-clean th {
+  text-align: left;
+  padding: .55rem;
+  color: white;
+  background: var(--bess-navy);
+}
+.table-clean td {
+  padding: .52rem;
+  border-bottom: 1px solid rgba(7,25,47,.12);
+  background: rgba(255,255,255,.8);
+}
+
+.callout {
+  border-radius: 20px;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(0,92,169,.12), rgba(25,182,210,.10));
+  border: 1px solid rgba(0,92,169,.16);
+}
+
+.warning {
+  border-radius: 20px;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255,122,33,.14), rgba(245,183,0,.10));
+  border: 1px solid rgba(255,122,33,.22);
+}
+
+.conclusion {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
